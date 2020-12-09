@@ -3,8 +3,18 @@
   <head>
     <title>Book App</title>
     <link href="../styles/base.css" rel="stylesheet">
+    <link href="../styles/layout.css" rel="stylesheet">
+    <link href="../styles/modules.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello!</h1>
+    <%- include('./layout/header.ejs') %>
+    <p id="bookNum">Total Saved Books: <%= results.length %></p>
+    <ul>
+    <% results.forEach(currentBook => { %>
+      <li class="bookDetail">
+        <%- include('./layout/detail.ejs', {book: currentBook}) %>
+        <a class="viewDet" href="/books/<%= currentBook.id %>">View Details</a>
+      </li>
+    <% }) %>
   </body>
 </html>
