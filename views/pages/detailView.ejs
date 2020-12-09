@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= book.title %></title>
+    <link href="../styles/base.css" rel="stylesheet">
+    <link href="../styles/layout.css" rel="stylesheet">
+    <link href="../styles/modules.css" rel="stylesheet">
+  </head>
+  <body>
+   <%- include('./layout/header.ejs') %>
+    <main>
+      <section id="detail" class="bookDetail">
+      <%- include('./layout/detail.ejs') %>
+    </section>
+      <% if(display){ %>
+        <%- include('./layout/form.ejs') %>       
+      <% } %>
+      
+      <form action="/showForm/<%= book.id %>">
+        <button type="submit">Update Book</button>
+      </form>
+      <form action="/delete/<%= book.id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Book</button>
+      </form>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>

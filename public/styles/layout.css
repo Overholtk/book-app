@@ -1,0 +1,94 @@
+body{
+  background-color: gray;
+}
+
+ul {
+  list-style: none;
+}
+
+a{
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  float: left;
+  margin-top: 2%;
+}
+
+header {
+  background-color: black;
+  color: white;
+  height: fit-content;
+}
+
+
+section {
+  color: lightgray;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+header {
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+
+
+h2{
+  text-align: center;
+
+}
+
+nav{
+  float: right;
+  margin-top: 5%;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+fieldset{
+  background-color: lightgray;
+  width: 85%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 3%;
+}
+button{
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 92%;
+  margin-left: 10px;
+  margin-top: 1%;
+}
+
+.bookDetail{
+  margin: 3%;
+  height: fit-content;
+  border-radius: 1%;
+  background-color: lightgray;
+  box-shadow: 2px 2px darkgrey;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

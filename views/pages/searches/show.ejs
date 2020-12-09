@@ -2,22 +2,33 @@
 <html>
   <head>
     <title>Results</title>
+    <link href="../styles/base.css" rel="stylesheet">
+    <link href="../styles/layout.css" rel="stylesheet">
+    <link href="../styles/modules.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>Best Books!</h1>
-      <img src="https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png">
-    </header>
+    <%- include('../layout/header.ejs') %>
     <main>
-      <h2>Search Results:</h2>
+      <h2 id="searchResults">Search Results:</h2>
       <% let parsedData = JSON.parse(searchResults); %>
       <% parsedData.forEach(book => { %>
-
+        <section class="bookDetail">
+        <img class="thumb" src="<%= book.img %>">
         <ul>
-          <li id="book-title"><%= book.title%></li>
-          <li id="author name"><%= book.author %></li>
-          <li><%= book.description %></li>
+          <li class="title" id="book-title"><%= book.title%></li>
+          <li class="author" id="author name"><%= book.author %></li>
+          <li class="description"><%= book.description %></li>
         </ul>
+        <form action="/books" method='post'>
+          <input type="hidden" name="title" value="<%= book.title %>">
+          <input type="hidden" name="author" value="<%= book.author %>">
+          <input type="hidden" name="description" value="<%= book.description %>">
+          <input type="hidden" name="image_url" value="<%= book.img %>">
+          <input type="hidden" name="isbn" value="<%= book.isbn %>"> 
+          
+          <button type="submit">Save Book </button>
+        </form>
+        </section>
         <% }); %>
     </main>
   </body>

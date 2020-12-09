@@ -1,0 +1,7 @@
+<form action="/update/<%= book.id %>?_method=PUT" method="POST">
+  <input class="hide" type="text" name="title" value="<%= book.title %>">
+  <input class="hide" type="text" name="author" value="<%= book.author %>">
+  <input class="hide" type="text" name="description" value="<%= book.description %>">
+  <input class="hide" type="text" name="isbn" value="<%= book.isbn %>">
+  <button type="submit">Submit Update</button>
+</form>
