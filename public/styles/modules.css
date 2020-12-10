@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+.updateDelete{
+  width: 70%;
+  margin-bottom: 5%;
+}
+
 #text{
   height: 30px;
   width: 90%;

@@ -11,17 +11,19 @@
     <main>
       <section id="detail" class="bookDetail">
       <%- include('./layout/detail.ejs') %>
-    </section>
+    
       <% if(display){ %>
         <%- include('./layout/form.ejs') %>       
       <% } %>
-      
-      <form action="/showForm/<%= book.id %>">
-        <button type="submit">Update Book</button>
-      </form>
-      <form action="/delete/<%= book.id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Book</button>
-      </form>
+      <section id="detailForms">
+        <form action="/showForm/<%= book.id %>">
+          <button class="updateDelete" type="submit">Update Book</button>
+        </form>
+        <form action="/delete/<%= book.id %>?_method=DELETE" method="POST">
+          <button class="updateDelete" type="submit">Delete Book</button>
+        </form>
+      </section>
+    </section>
     </main>
     <footer>
 

@@ -80,6 +80,7 @@ button{
   width: 92%;
   margin-left: 10px;
   margin-top: 1%;
+  margin-bottom: 2%;
 }
 
 .bookDetail{
@@ -91,4 +92,12 @@ button{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#detailForms{
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40em;
 }
